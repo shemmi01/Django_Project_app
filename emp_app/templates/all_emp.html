@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE_PROJECT</title>
+</head>
+<body bgcolor="white">
+
+    <div class="container">
+        <!-- Content here -->
+        <h1>VIEW ALL EMPLOYEE DETAILS</h1>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <hr>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Salary</th>
+              <th scope="col">Bonus</th>
+              <th scope="col">Phone number</th>
+              <th scope="col">Role</th>
+              <th scope="col">Department</th>
+              <th scope="col">Location</th>
+              <th scope="col">Hire Date</th>
+            </tr>
+          </thead>
+          {% for emp in emps %}
+          <tbody>
+            <tr>
+              <th scope="row">{{emp.id}}</th>
+              <td>{{emp.first_name}}</td>
+              <td>{{emp.last_name}}</td>
+              <td>{{emp.salary}}</td>
+              <td>{{emp.Bonus}}</td>
+              <td>{{emp.Phone_number}}</td>
+              <td>{{emp.Role.name}}</td>
+              <td>{{emp.Dept.name}}</td>
+              <td>{{emp.dept.Location}}</td>
+              <td>{{emp.hire_date}}</td>
+            </tr>
+          </tbody>
+          {% endfor %}
+        </table>
+      </div>
+   
+</body>
+</html>

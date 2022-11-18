@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE_PROJECT</title>
+</head>
+<body bgcolor="white">
+
+    <div class="container">
+        <!-- Content here -->
+        <h1>Filter Employee Details</h1>
+        {% block content %}
+        
+        {% endblock %}
+
+        <hr>
+
+        <form action="/filter_emp" method="post">
+            {% csrf_token %}
+           
+              <label for="name">First Name/Last_name</label><br>
+              <input type="text" id="name" name="name"value="{{name}}"><br>
+
+              <label for="Department">Department</label><br>
+              <input type="text" id="Department" name="Department"value="{{dept}}"><br>
+              
+              <label for="Role">Role</label><br>
+              <input type="text" id="Role"name="Role" value="{{role}}"><br>
+              
+              <hr>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+       
+       
+      </div>
+   
+</body>
+</html>

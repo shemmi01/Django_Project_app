@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLOYEE_PROJECT</title>
+</head>
+<body bgcolor="white">
+
+    <div class="container">
+        <!-- Content here -->
+        <h1>ADD EMPLOYEE!!</h1>
+        <hr>
+        <form action="/add_emp" method="post">
+            {% csrf_token %}
+           
+              <label for="first_name">First Name</label><br>
+              <input type="text" id="first_name" name="first_name"value="{{first_name}}"><br>
+              <label for="last_name">Last Name</label><br>
+              <input type="text" id="Last_name" name="Last_name"value= "{{Last_name}}"><br>
+              <label for="salary">salary</label><br>
+              <input type="text" id="salary"name="salary" value="{{salary}}"><br>
+              <label for="Department">Department</label><br>
+              <input type="text" id="Department" name="Department"value="{{dept}}"><br>
+              <label for="Bonus">Bonus</label><br>
+              <input type="text" id="Bonus"name="Bonus" value="{{bonus}}"><br>
+              <label for="Role">Role</label><br>
+              <input type="text" id="Role"name="Role" value="{{role}}"><br>
+              <label for="Phone">Phone number</label><br>
+              <input type="number" id="phone" name="number"value="{{role}}"><br>
+              <hr>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+       
+      </div>
+   
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "folders":[
+        {
+            "path": "."
+        }
+    ],
+    "settings":
+    {
+        "python.terminalEnvInCurrentTerminal":true,
+        "python.defaultInterpreterPath":"/Users/Sharmila/Envs/hot/Scripts/activate"
+    }
+}
